@@ -1,0 +1,32 @@
+/* .heroSection{
+    background-color: #030F6D;
+    height: 500px;
+    width: 100vw;
+    color: white;
+    
+} */
+
+.heroSection {
+  padding: 6rem 4rem 2rem 18rem;
+    /* padding: 8rem 4rem 4rem 2rem; */
+    background:#030F6D;
+    color: white;
+    /* height: 500px; */
+    width: 1300px;
+    align-items:center;
+    clip-path: ellipse(100% 100% at 40% 0%);
+  }
+  
+  .cta_btn {
+    background: #2aa006;
+    padding: 1rem 2rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .cta_btn:hover{
+    background-color: #2aa006e7;
+  }
+  
