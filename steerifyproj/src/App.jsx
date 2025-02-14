@@ -11,6 +11,8 @@ import Culture from "./pages/Culture";
 import NewsLetter from './pages/NewsLetter';
 import Blog from "./pages/Blog"
 import TheTeam from "./pages/TheTeam";
+import AboutUs from "./pages/AboutUs"
+import ContactUs from "./pages/ContactUs"
 import Footer from "./components/Footer";
 
 
@@ -32,6 +34,8 @@ function App() {
       <Route path ="/SteerifyLens/NewsLetter" exact element = {<NewsLetter/>}/>
       <Route path ="/SteerifyLens/Blog" exact element = {<Blog/>}/>
       <Route path ="/SteerifyLens/TheTeam" exact element = {<TheTeam/>}/>
+      <Route path ="/SteerifyLens/AboutUs" exact element = {<AboutUs/>}/>
+      <Route path ="/ContactUs" exact element = {<ContactUs/>}/>
 
       </Routes>
       <Footer/>

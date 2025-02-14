@@ -18,5 +18,14 @@ export const navBarItems = [
         "title": "Steerify Lens",
         "path": "/SteerifyLens",
         "cName": "nav_bar_item" 
+    },
+
+    {
+        "id": 4,
+        "title": "Contact Us",
+        "path": "/ContactUs",
+        "cName": "nav_bar_item"
     }
+
+
 ]
