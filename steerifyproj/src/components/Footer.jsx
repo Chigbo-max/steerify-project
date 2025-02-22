@@ -14,7 +14,13 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 // import InstagramIcon from '@material-ui/icons/Instagram';
 // import FacebookIcon from '@material-ui/icons/Facebook';
 
-
+const links = [{ title: "Business", path:"/Business"
+},
+{ title: "Contact us", path:"/Contact"
+},
+{ title: "About Steerify", path:"/About"
+}
+]
 
 function Footer() {
     return (
@@ -23,11 +29,12 @@ function Footer() {
                 <img src={FooterLogo}/>
             </div>
             <div className="rightSideFooter">
-                <div className="threeOptions">
-                    <Link to = "/Business"><h3>Business</h3></Link>
-                    <Link to = "/Contact"><h3>Contact us</h3></Link>
-                    <Link to = "/About"><h3>About Steerify</h3></Link>
+{links.map((list, index)=>{
+                return(<div  key ={index}className="threeOptions">
+                    <Link to = {list.path}><h3>{list.title}</h3></Link>
+    
                 </div>
+                )})}
                 <div id="line"></div>
                 <div className="address">
                     <div className="location">
@@ -45,7 +52,7 @@ function Footer() {
                     </div>
                     <div className="contact">
                         <p>contact with us</p>
-                        <p>hello@steerify.com</p>
+                        <p>hello@steerifygroup.com</p>
 
                         <div className="socials">
                             <div className="instagram">

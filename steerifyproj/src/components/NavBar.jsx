@@ -6,17 +6,23 @@ import style from "../styles/NavBar.module.css"
 import DropDown from "./DropDown.jsx"
 import BusinessDropDown from "./BuisnessDropDown.jsx"
 import { LiaAngleDownSolid,LiaBarsSolid} from "react-icons/lia";
-import {useState} from "react";
+import {useDispatch, useSelector} from "react-redux"
+import { setDropDown, setOpenLink, setBusinessDropDown} from '../app/navBar/navBarSlice.jsx'
+import {useNavigate} from "react-router-dom";
 
 
 function NavBar() {
 
-    const[dropDown, setDropDown] = useState(false);
-    const[openLink, setOpenLink] = useState(false);
-    const[businessDropDown, setBusinessDropDown] = useState(false);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const {openLink, dropDown, businessDropDown} = useSelector((state)=> state.navBar);
+
+    // const[dropDown, setDropDown] = useState(false);
+    // const[openLink, setOpenLink] = useState(false);
+    // const[businessDropDown, setBusinessDropDown] = useState(false);
 
     function toggleBar(){
-        setOpenLink(!openLink)
+        dispatch(setOpenLink(!openLink));
     }
 
     return (
@@ -35,8 +41,8 @@ function NavBar() {
                         return (
                             
                             <li key={item.id} className = {item.cName}
-                            onMouseEnter ={()=>setDropDown(true)}
-                            onMouseLeave = {()=>setDropDown(false)}>
+                            onMouseEnter ={()=>useDispatch(setDropDown(true))}
+                            onMouseLeave = {()=>useDispatch(setDropDown(false))}>
                             <Link to={item.path}>{item.title}<LiaAngleDownSolid/></Link>
                             {dropDown && <DropDown />}
                             </li>
@@ -47,8 +53,8 @@ function NavBar() {
                     if(item.title === "Business"){
                         return (
                             <li key={item.id} className = {item.cName}
-                            onMouseEnter ={()=>setBusinessDropDown(true)}
-                            onMouseLeave = {()=>setBusinessDropDown(false)}>
+                            onMouseEnter ={()=>useDispatch(setBusinessDropDown(true))}
+                            onMouseLeave = {()=>useDispatch(setBusinessDropDown(false))}>
                                 <Link to={item.path}>{item.title}<LiaAngleDownSolid/></Link>
                                 {businessDropDown && <BusinessDropDown/>}
                             </li>
@@ -69,10 +75,10 @@ function NavBar() {
                 
             </div>
             <div className={style.signUpButton}>
-            <button>Sign Up</button>
+            <button onClick={()=>navigate("/signUp")}>Sign Up</button>
             </div>
             <div onClick = {toggleBar}className={style.hiddenButton}>
-            <button><LiaBarsSolid/></button>
+            <button onClick={()=>navigate("/signUp")}><LiaBarsSolid/></button>
             </div>
         </div>
         </nav>

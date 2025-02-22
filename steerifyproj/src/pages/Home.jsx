@@ -1,6 +1,7 @@
 import React from 'react'
 import Style from "../styles/Home.module.css"
 import Features from "../components/Features"
+import Products from "../components/products"
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         <button className={Style.cta_btn}>Get Started</button>
       </section>
       <Features/>
+      <Products/>
     </div>
   )
 }

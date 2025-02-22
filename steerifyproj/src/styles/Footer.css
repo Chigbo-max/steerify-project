@@ -29,8 +29,12 @@ margin-left: 100px;
 }
 
 .threeOptions h3{
-    font-size: 22px;
+    font-size: 20px;
     color: white;
+}
+
+.threeOptions h3:hover{
+    color: #2aa006;
 }
 
 p{
