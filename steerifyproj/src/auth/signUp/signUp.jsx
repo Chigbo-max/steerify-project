@@ -5,6 +5,8 @@ import { CiMail } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
 import banner from "./../../assets/steerifyBanner.png";
 import Style from '../style/signUp.module.css'
+import GoogleLoginButton from "../googleSignIn/GoogleLoginButton";
+
 
 function signUp() {
 
@@ -40,7 +42,9 @@ function signUp() {
                     <label>Already have an account?</label>
                     <button onClick ={()=>navigate("/logIn")}type='submit'>LogIn</button>
                 </div>
+                <GoogleLoginButton/>
                 </div>
+
 
             </form>
             </div>
@@ -48,7 +52,7 @@ function signUp() {
                 <img src={banner} alt="banner"/>
 
             </div>
-
+            
         </div>
     )
 }

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Style from '../style/login.module.css'
 import { Link } from 'react-router-dom';
 import banner from "./../../assets/steerifyBanner.png";
+import GoogleLoginButton from "../googleSignIn/GoogleLoginButton";
 
 
 function loginPage() {
@@ -39,6 +40,7 @@ function loginPage() {
                         <div className={Style.forgetPassword}>
                     <Link to="/">forget password</Link>
                     </div>
+                    <GoogleLoginButton/>
                 </form>
             </div>
 

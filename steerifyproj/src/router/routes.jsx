@@ -1,19 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/Layout";
-import Home from "../pages/Home";
-import Business from "../pages/Business";
-import StartUp from "../pages/StartUp";
-import ExistingBusiness from "../pages/ExistingBusiness";
-import Investors from "../pages/Investors";
-import SteerifyLens from "../pages/SteerifyLens";
-import Culture from "../pages/Culture";
-import NewsLetter from '../pages/NewsLetter';
-import Blog from "../pages/Blog"
-import TheTeam from "../pages/TheTeam";
-import AboutUs from "../pages/AboutUs"
-import ContactUs from "../pages/ContactUs"
+import Home from "../pages/Home/Home";
+import Business from "../pages/Business/Business";
+import StartUp from "../pages/StartUp/StartUp";
+import ExistingBusiness from "../pages/ExistingBusiness/ExistingBusiness";
+import Investors from "../pages/Investor/Investors";
+import SteerifyLens from "../pages/SteerifyLens/SteerifyLens";
+import Culture from "../pages/Culture/Culture";
+import NewsLetter from '../pages/NewsLetter/NewsLetter';
+import Blog from "../pages/Blog/Blog"
+import TheTeam from "../pages/TheTeam/TheTeam";
+import AboutUs from "../pages/AboutUs/AboutUs"
+import ContactUs from "../pages/ContactUs/ContactUs"
 import LoginIn from "../auth/login/login";
 import SignUp from "../auth/signUp/signUp"
+import PrivateRoute from "../auth/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
             {path :"/ContactUs", element : <ContactUs/>},
             {path : "/signUp", element : <SignUp/>},
             {path : "/login", element : <LoginIn/>},
+            {path : "/", element : <PrivateRoute><Home/></PrivateRoute>}
         ],
     
     }
