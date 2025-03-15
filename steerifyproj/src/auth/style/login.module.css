@@ -47,7 +47,7 @@
     border: 1px solid #030F6D;
 }
 
-.form button {
+.form Button {
     width: 100%;
     padding: 0.8rem;
     border-radius: 15px;
@@ -66,7 +66,7 @@
     width: 100%;
 }
 
-.form button:hover{
+.form Button:hover{
     background-color: white;
     color:#030F6D;
     cursor: pointer;
@@ -112,7 +112,7 @@
     }
 
     .form input,
-    .form button {
+    .form Button {
         max-width: 100%;
         font-size: 1rem;
     }

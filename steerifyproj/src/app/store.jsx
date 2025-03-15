@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
+import { setupListeners } from '@reduxjs/toolkit/query'
+import {steerifyApi} from '../services/SteerifyApi'
 import navBarReducer from './navBar/navBarSlice'
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     navBar: navBarReducer,
+    [steerifyApi.reducePath]: steerifyApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>getDefaultMiddleware().concat(steerifyApi.middleware),
 })
 
-export default store
+setupListeners(store.dispatch)
