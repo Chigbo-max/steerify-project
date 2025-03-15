@@ -26,7 +26,7 @@ const GoogleLoginButton = () => {
             } catch (error) {
                 console.error("Login failed:", error.response?.data || error.message);
             }
-        }, 500); // Small delay to ensure token availability
+        }, 500);
     };
 
     return (

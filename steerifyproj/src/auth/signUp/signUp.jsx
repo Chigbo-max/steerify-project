@@ -13,46 +13,45 @@ function signUp() {
     const navigate = useNavigate();
     return (
         <div className={Style.signUp}>
-            <div className ={Style.form}>
-            <h1>Sign Up</h1>
-            <form>
-                <div className={Style.inputContainer}>
-                    <input type='text' placeholder='First name' />
-                </div>
-                <div className={Style.inputContainer}>
-                    <input type='text' placeholder= 'Last name' />
-                </div>
+            <div className={Style.form}>
+                <form>
+                    <div className={Style.inputContainer}>
+                        <input type='text' placeholder='First name' />
+                    </div>
+                    <div className={Style.inputContainer}>
+                        <input type='text' placeholder='Last name' />
+                    </div>
 
-                <div className={Style.inputContainer}>
-                    <input type='email' placeholder= 'Type your email address' />
-                </div>
+                    <div className={Style.inputContainer}>
+                        <input type='email' placeholder='Type your email address' />
+                    </div>
 
-                <div className={Style.inputContainer}>
-                    <input type='password' placeholder= 'Enter password' />
-                </div>
+                    <div className={Style.inputContainer}>
+                        <input type='password' placeholder='Enter password' />
+                    </div>
 
-                <div className={Style.inputContainer}>
-                    <input type='password' placeholder= 'confirm password' />
-                </div>
+                    <div className={Style.buttonContainer}>
+                        <button type='submit'>Sign Up</button>
 
-                <div className={Style.buttonContainer}>
-                    <button type='submit'>Sign Up</button>
-                
-                <div className={Style.loginContainer}>
-                    <label>Already have an account?</label>
-                    <button onClick ={()=>navigate("/logIn")}type='submit'>LogIn</button>
-                </div>
-                <GoogleLoginButton/>
-                </div>
+                        <div className={Style.orSeparator}>
+                            <span>OR</span>
+                            <GoogleLoginButton />
+                        </div>
 
+                        
 
-            </form>
+                        <div className={Style.loginContainer}>
+                            <label>Already have an account?</label>
+                            <button onClick={() => navigate("/logIn")} type='submit'>LogIn</button>
+                        </div>                    
+                        </div>
+                </form>
             </div>
-            <div className ={Style.banner}>
-                <img src={banner} alt="banner"/>
+            <div className={Style.banner}>
+                <img src={banner} alt="banner" />
 
             </div>
-            
+
         </div>
     )
 }

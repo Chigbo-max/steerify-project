@@ -19,7 +19,6 @@ function loginPage() {
             </div>
             <div className={Style.form}>
 
-                <h1>Login</h1>
                 <form>
                     <div className={Style.inputContainer}>
                         <CiMail className={Style.inputIcon} />
