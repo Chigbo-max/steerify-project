@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { dropDownItems } from "../helpers/DropDownItems.jsx";
+import { productsDropDownItems } from "../helpers/ProductsDropDownItems.jsx";
 import { Link } from "react-router-dom";
 
-function DropDown() {
-  const [dropDown, setDropDown] = useState(true);
+function ProductsDropDown() {
+  const [dropDown, setDropDown] = useState(true); // true so it shows when parent sets state
 
   return (
     <div className="absolute mt-0">
@@ -13,7 +13,7 @@ function DropDown() {
         } bg-white w-40 p-1 rounded-lg shadow-lg`}
         onClick={() => setDropDown(!dropDown)}
       >
-        {dropDownItems.map((item) => (
+        {productsDropDownItems.map((item) => (
           <li
             key={item.id}
             className="px-3 py-2 bg-[#030F6D] hover:bg-[#2aa006] transition"
@@ -32,4 +32,4 @@ function DropDown() {
   );
 }
 
-export default DropDown;
+export default ProductsDropDown;

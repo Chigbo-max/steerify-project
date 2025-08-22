@@ -24,7 +24,6 @@ function loginPage() {
         event.preventDefault();
         try {
             const response = await logIn(formData).unwrap();
-            console.log(response)
             setSuccessMessage("Login Successful");
         } catch (error) {
             console.log("Failed to login in, please check your password/email and try again")

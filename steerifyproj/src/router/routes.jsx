@@ -1,10 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/Layout";
 import Home from "../pages/Home/Home";
-import Business from "../pages/Business/Business";
-import StartUp from "../pages/StartUp/StartUp";
-import ExistingBusiness from "../pages/ExistingBusiness/ExistingBusiness";
-import Investors from "../pages/Investor/Investors";
+import Products from "../pages/Products/Products";
+import Cleaning from "../pages/Cleaning/Cleaning";
 import SteerifyLens from "../pages/SteerifyLens/SteerifyLens";
 import Culture from "../pages/Culture/Culture";
 import NewsLetter from '../pages/NewsLetter/NewsLetter';
@@ -14,8 +12,8 @@ import AboutUs from "../pages/AboutUs/AboutUs"
 import ContactUs from "../pages/ContactUs/ContactUs"
 import LoginIn from "../auth/login/login";
 import SignUp from "../auth/signUp/signUp"
-import PrivateRoute from "../auth/PrivateRoute";
-
+// import PrivateRoute from "../auth/PrivateRoute";
+import NotFound from "../ErrorPages/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -23,10 +21,8 @@ const router = createBrowserRouter([
         element: <Layout/>,
         children: [
             {path: "/", element: <Home/>},
-            {path :"/Business", element:<Business/>},
-            {path :"/Business/start-up", element:<StartUp/>},
-            {path :"/Business/existing-business", element:<ExistingBusiness/>},
-            {path :"/Business/investors", element:<Investors/>},
+            {path :"/Products", element:<Products/>},
+            {path :"/Products/cleaning", element:<Cleaning/>},
             {path :"/SteerifyLens", element:<SteerifyLens/>},
             {path :"/SteerifyLens/Culture", element:<Culture/>},
             {path :"/SteerifyLens/NewsLetter", element : <NewsLetter/>},
@@ -36,7 +32,9 @@ const router = createBrowserRouter([
             {path :"/ContactUs", element : <ContactUs/>},
             {path : "/signUp", element : <SignUp/>},
             {path : "/login", element : <LoginIn/>},
-            {path : "/", element : <PrivateRoute><Home/></PrivateRoute>}
+            // {path : "/", element : <PrivateRoute><Home/></PrivateRoute>},
+            {path : "*", element : <NotFound/>},
+
         ],
     
     }

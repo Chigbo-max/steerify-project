@@ -1,78 +1,84 @@
-
-
-import React from "react";
-import Style from "../styles/Features.module.css";
-import {Link} from "react-router-dom"
-import banner from "../assets/steerifyBanner.png";
-import { useNavigate } from "react-router-dom";
-import { FaUsers, FaBook, FaCalendarAlt } from "react-icons/fa";
-import {motion} from "framer-motion";
+import React from 'react';
+import { MapPin, Calendar, CreditCard, MessageSquare, Shield, CheckCircle } from 'lucide-react';
 
 const Features = () => {
-
-  const navigate = useNavigate();
-
+  const features = [
+    {
+      icon: MapPin,
+      title: "Location-Based Search",
+      description: "Find service providers in your local government area (LGA) with accurate distance and availability."
+    },
+    {
+      icon: Calendar,
+      title: "Easy Booking",
+      description: "Schedule services at your convenience with real-time provider availability."
+    },
+    {
+      icon: CreditCard,
+      title: "Secure Escrow Payment",
+      description: "Funds are held safely until service completion. Pay with confidence."
+    },
+    {
+      icon: MessageSquare,
+      title: "Real-Time Communication",
+      description: "Chat directly with service providers through our secure messaging system."
+    },
+    {
+      icon: Shield,
+      title: "Quality Assurance",
+      description: "All providers are background-checked, skill-verified, and monitored for quality."
+    },
+    {
+      icon: CheckCircle,
+      title: "Satisfaction Guarantee",
+      description: "Not satisfied? We'll make it right or refund your money. No questions asked."
+    }
+  ];
 
   return (
-    <section className={Style.features}>
-      <div className={Style.feature_cards}>
-        <div 
-          className={Style.imageContainer}
-        ><img src={banner} /></div>
-        <div className={Style.textContainer}>
-          <h5>ABOUT STEERIFY</h5>
-          <h2>Steering Success <span>Through Connections</span></h2>
-          <p>
-            Steerify is a service-matching platform that connects customers with businesses. Our goal
-            is to create value for both parties by providing a platform that is easy to use and
-            navigate. We are committed to helping businesses grow and customers find the best
-            products and services.
+    <section className="py-20 bg-[#030F6D] text-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            How Steerify <span className="text-[#2aa006]">Works</span>
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Our platform combines booking, escrow protection, and reviews to create 
+            a trustworthy marketplace for local services.
           </p>
-          <div className= {Style.about_button}>
-          <Link to ="/insideCPN/about">LEARN MORE &rarr;</Link>
-          </div>
         </div>
-      </div>
-      <div className={Style.threeFeatures}>
-        <div className={Style.threeFeaturesBox} onClick ={()=>navigate("/community")} >
-        <motion.div 
-            className={Style.featureIcon}
-            initial={{ y: -50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}
-          >
-        <FaUsers />
-        </motion.div>
-          <h3>Community</h3>
-          <p>Find resources to equip and conect your community.</p>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+              <div className="w-14 h-14 bg-[#2aa006] rounded-xl flex items-center justify-center mb-6">
+                <feature.icon className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
+              <p className="opacity-90">{feature.description}</p>
+            </div>
+          ))}
         </div>
-        <div className={Style.threeFeaturesBox} onClick ={()=>navigate("/knowledgeHub")} >
-          <motion.div 
-            className={Style.featureIcon} 
-            initial={{ y: -50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}
-          >
-          
-          <FaBook/>
-          </motion.div>
-          <h3>Knowledge Hub</h3>
-          <p>Explore our free biblically-aligned resources.</p>
-        </div>
-        <div className={Style.threeFeaturesBox} onClick ={()=>navigate("/events")} >
-        <motion.div 
-            className={Style.featureIcon}
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}
-          >
-        <FaCalendarAlt/>
-        </motion.div>
-          <h3>Events</h3>
-          <p>Engage with passionate Christian professionals.</p>
+
+        {/* Process Steps */}
+        <div className="grid md:grid-cols-4 gap-6">
+          {[
+            { step: "1", title: "Search", desc: "Find providers by location & rating" },
+            { step: "2", title: "Book", desc: "Schedule and pay into secure escrow" },
+            { step: "3", title: "Receive", desc: "Get your service completed perfectly" },
+            { step: "4", title: "Review", desc: "Rate provider and release payment" }
+          ].map((item, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-[#2aa006] rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                {item.step}
+              </div>
+              <h4 className="font-bold text-lg mb-2">{item.title}</h4>
+              <p className="text-sm opacity-80">{item.desc}</p>
+              {index < 3 && (
+                <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-[#2aa006]/30 transform translate-x-1/2"></div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

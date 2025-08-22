@@ -8,8 +8,8 @@ export const navBarItems = [
 
     {
         "id": 2,
-        "title": "Business",
-        "path": "/Business",
+        "title": "Products",
+        "path": "/Products",
         "cName": "nav_bar_item"
     },
 

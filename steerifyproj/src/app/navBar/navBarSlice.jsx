@@ -2,7 +2,7 @@ import{createSlice} from '@reduxjs/toolkit';
 const initialState = {
     dropDown : false,
     openLink : false,
-    businessDropDown: false
+    productsDropDown: false
 }
 
 export const navBarSlice = createSlice({
@@ -15,11 +15,11 @@ export const navBarSlice = createSlice({
         setOpenLink: (state, action) => {
             state.openLink = action.payload;
         },
-        setBusinessDropDown: (state, action) => {
-            state.businessDropDown = action.payload;
+        setProductsDropDown: (state, action) => {
+            state.productsDropDown = action.payload;
         }
     }
 })
 
-export const {setDropDown, setOpenLink, setBusinessDropDown} = navBarSlice.actions;
+export const {setDropDown, setOpenLink, setProductsDropDown} = navBarSlice.actions;
 export default navBarSlice.reducer;
