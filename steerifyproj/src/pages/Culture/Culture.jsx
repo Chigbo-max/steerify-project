@@ -1,10 +1,9 @@
-import React from 'react'
-import Style from "./culture.module.css"
+
 
 function Culture() {
   return (
     <div>
-      <div className={Style.heroSection}>
+      <div>
                 <h1>Culture</h1>
               </div>
     </div>

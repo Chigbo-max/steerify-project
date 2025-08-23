@@ -1,4 +1,3 @@
-import React from 'react'
 
 function Button(props) {
     const{type, style, action} = props;

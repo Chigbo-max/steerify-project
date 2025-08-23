@@ -9,7 +9,7 @@ function App() {
 
   return (
     <GoogleOAuthProvider clientId={clientId}>
-    <div className="App">
+    <div className="bg-white">
       
       <RouterProvider router = {router}
        future={{

@@ -1,4 +1,5 @@
 import { Shield, CheckCircle, Users, Clock, Star, ArrowRight, MapPin, CreditCard, Sparkles, Home, Building, Droplets, Bug, Waves } from 'lucide-react';
+import heroImg from "../../assets/guy-photo.png"
 
 function Cleaning() {
   const cleaningServices = [
@@ -91,7 +92,7 @@ function Cleaning() {
             <span className="text-[#2aa006] font-semibold">Phase 1 Launch - Lagos</span>
           </div>
           
-          <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl lg:text-6xl font-bold ">
             Professional Cleaning &
             <span className="text-[#2aa006]"> Maintenance</span> Services
           </h1>
@@ -129,7 +130,7 @@ function Cleaning() {
         {/* Right Image */}
         <div className="hidden lg:flex w-[400px] lg:w-[500px]">
           <img
-            src="https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src={heroImg}
             alt="Professional cleaning service"
             className="object-cover w-full h-full rounded-2xl shadow-2xl"
           />
@@ -228,7 +229,7 @@ function Cleaning() {
           {/* Fraud Protection Highlight */}
           <div className="bg-[#030F6D] text-white rounded-2xl p-8 text-center">
             <Shield className="w-16 h-16 text-[#2aa006] mx-auto mb-6" />
-            <h3 className="text-3xl font-bold mb-4">100% Fraud Protection Guarantee</h3>
+            <h3 className="text-3xl opacity-90 font-bold mb-4">100% Fraud Protection Guarantee</h3>
             <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto">
               Your payment is held in secure escrow until the cleaning service is completed to your satisfaction. 
               If you're not happy, we'll send another cleaner or refund your money. No questions asked.

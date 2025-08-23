@@ -1,9 +1,8 @@
-import Style from "./contactus.module.css"
 
 
 function ContactUs() {
   return (
-    <div className={Style.heroSection}>
+    <div>
         <h1>Contact us</h1>
       
     </div>

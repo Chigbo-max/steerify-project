@@ -6,7 +6,7 @@ function About() {
       {/* Hero Section */}
       <section className="bg-[#030F6D] text-white py-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 mt-25">
             About <span className="text-[#2aa006]">Steerify</span>
           </h1>
           <p className="text-xl lg:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">

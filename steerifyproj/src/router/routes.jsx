@@ -1,9 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/Layout";
 import Home from "../pages/Home/Home";
-import Products from "../pages/Products/Products";
+import Products from "../pages/Products/Products"
 import Cleaning from "../pages/Cleaning/Cleaning";
-import SteerifyLens from "../pages/SteerifyLens/SteerifyLens";
 import Culture from "../pages/Culture/Culture";
 import NewsLetter from '../pages/NewsLetter/NewsLetter';
 import Blog from "../pages/Blog/Blog"
@@ -21,9 +20,8 @@ const router = createBrowserRouter([
         element: <Layout/>,
         children: [
             {path: "/", element: <Home/>},
-            {path :"/Products", element:<Products/>},
+            {path: "/Products", element: <Products/>},
             {path :"/Products/cleaning", element:<Cleaning/>},
-            {path :"/SteerifyLens", element:<SteerifyLens/>},
             {path :"/SteerifyLens/Culture", element:<Culture/>},
             {path :"/SteerifyLens/NewsLetter", element : <NewsLetter/>},
             {path :"/SteerifyLens/Blog", element : <Blog/>},

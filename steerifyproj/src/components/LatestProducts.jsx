@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
 const LatestProducts = () => {
@@ -42,8 +41,8 @@ const LatestProducts = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-20 bg-gray-50 w-full overflow-hidden">
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between mb-16">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -59,9 +58,9 @@ const LatestProducts = () => {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 w-full">
           {topProviders.map((provider, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group w-full">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={provider.image} 
@@ -106,7 +105,7 @@ const LatestProducts = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
+        <div className="bg-white rounded-2xl p-8 shadow-lg w-full">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Customers Trust These Providers</h3>
           </div>
@@ -130,7 +129,7 @@ const LatestProducts = () => {
         </div>
 
         {/* Mobile View All Button */}
-        <div className="lg:hidden text-center mt-8">
+        <div className="lg:hidden text-center mt-8 w-full">
           <button className="inline-flex items-center space-x-2 bg-[#030F6D] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#030F6D]/90 transition">
             <span>View All Providers</span>
             <ArrowRight className="w-5 h-5" />

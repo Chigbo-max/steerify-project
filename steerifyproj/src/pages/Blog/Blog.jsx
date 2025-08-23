@@ -1,10 +1,8 @@
-import React from 'react'
-import Style from "../Home/Home.module.css"
 
 function Blog() {
     return (
         <div>
-            <div className={Style.heroSection}>
+            <div>
 
                 <h1>Blog</h1>
             </div>
