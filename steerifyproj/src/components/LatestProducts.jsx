@@ -1,8 +1,8 @@
 import { Star, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 import PestControl from "../assets/pest-control.jpeg"
 import Plates from "../assets/plates.jpeg"
-import Laundry from "../assets/Laundry.jpeg"
-import Pool from "../assets/Pool.jpeg"
+import Laundry from "../assets/laundry.jpeg"
+import Pool from "../assets/pool.jpeg"
 
 const LatestProducts = () => {
   const topProviders = [
