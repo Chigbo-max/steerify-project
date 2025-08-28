@@ -43,7 +43,7 @@ function Footer() {
             <p className="mb-2">
               Plot 9, Dr. Nurudeen Olowopopo Avenue, Central Business District, Alausa 100212, Ikeja, Lagos, Nigeria
             </p>
-            <p className="mb-2">Over 24 physical branches across the nation.</p>
+            {/* <p className="mb-2">Over 24 physical branches across the nation.</p> */}
             <p className="mt-4">&copy; 2025 Steerify. All Rights Reserved.</p>
           </div>
 

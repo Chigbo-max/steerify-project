@@ -1,4 +1,8 @@
 import { Star, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import PestControl from "../assets/pest-control.jpeg"
+import Plates from "../assets/plates.jpeg"
+import Laundry from "../assets/Laundry.jpeg"
+import Pool from "../assets/Pool.jpeg"
 
 const LatestProducts = () => {
   const topProviders = [
@@ -7,7 +11,7 @@ const LatestProducts = () => {
       service: "Home Cleaning",
       rating: 4.9,
       reviews: 127,
-      image: "https://images.pexels.com/photos/4239142/pexels-photo-4239142.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: Plates,
       price: "₦15,000",
       badges: ["Verified", "Top Rated", "Same Day"]
     },
@@ -16,7 +20,7 @@ const LatestProducts = () => {
       service: "Laundry Services", 
       rating: 4.8,
       reviews: 89,
-      image: "https://images.pexels.com/photos/5591581/pexels-photo-5591581.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: Laundry,
       price: "₦8,000",
       badges: ["Verified", "Pickup & Delivery", "Eco-Friendly"]
     },
@@ -25,7 +29,7 @@ const LatestProducts = () => {
       service: "Pool Cleaning",
       rating: 5.0,
       reviews: 34,
-      image: "https://images.pexels.com/photos/261146/pexels-photo-261146.jpeg?auto=compress&cs=tinysrgb&w=400", 
+      image: Pool, 
       price: "₦25,000",
       badges: ["Verified", "Weekly Service", "Chemical Balancing"]
     },
@@ -34,7 +38,7 @@ const LatestProducts = () => {
       service: "Fumigation",
       rating: 4.7,
       reviews: 156,
-      image: "https://images.pexels.com/photos/8964743/pexels-photo-8964743.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: PestControl,
       price: "₦20,000", 
       badges: ["Verified", "Safe & Effective", "Residential"]
     }

@@ -1,5 +1,11 @@
 import { Shield, CheckCircle, Users, Clock, Star, ArrowRight, MapPin, CreditCard, Sparkles, Home, Building, Droplets, Bug, Waves } from 'lucide-react';
 import heroImg from "../../assets/guy-photo.png"
+import Laundry from "../../assets/laundry.jpeg"
+import Pest from "../../assets/pest-control.jpeg"
+import Pool from "../../assets/pool.jpeg"
+import Industrial from "../../assets/carpet.jpeg"
+import Plates from "../../assets/plates.jpeg"
+
 
 function Cleaning() {
   const cleaningServices = [
@@ -10,7 +16,7 @@ function Cleaning() {
       features: ["Same-day service available", "Eco-friendly detergents", "Door-to-door pickup & delivery", "Stain removal specialists"],
       price: "From ₦5,000",
       duration: "2-24 hours",
-      image: "https://images.pexels.com/photos/5591581/pexels-photo-5591581.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: Laundry,
     },
     {
       icon: Home,
@@ -19,7 +25,7 @@ function Cleaning() {
       features: ["Regular or one-time cleaning", "Move-in/move-out cleaning", "Detailed cleaning checklist", "Bring own supplies"],
       price: "From ₦15,000",
       duration: "3-6 hours",
-      image: "https://images.pexels.com/photos/4239142/pexels-photo-4239142.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: Plates,
     },
     {
       icon: Building,
@@ -28,7 +34,7 @@ function Cleaning() {
       features: ["Office buildings", "Warehouses & factories", "Retail spaces", "Post-construction cleanup"],
       price: "From ₦50,000",
       duration: "4-8 hours",
-      image: "https://images.pexels.com/photos/2586823/pexels-photo-2586823.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: Industrial,
     },
     {
       icon: Bug,
@@ -37,7 +43,7 @@ function Cleaning() {
       features: ["Residential fumigation", "Commercial pest control", "Preventive treatments", "Safe for pets & children"],
       price: "From ₦20,000",
       duration: "2-4 hours",
-      image: "https://images.pexels.com/photos/8964743/pexels-photo-8964743.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: Pest
     },
     {
       icon: Waves,
@@ -46,7 +52,7 @@ function Cleaning() {
       features: ["Weekly maintenance", "Chemical balancing", "Equipment inspection", "Debris removal"],
       price: "From ₦25,000",
       duration: "2-3 hours",
-      image: "https://images.pexels.com/photos/261146/pexels-photo-261146.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: Pool
     }
   ];
 
