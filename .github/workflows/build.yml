@@ -22,11 +22,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install backend dependencies
-        run: |
-          cd backend
-          npm ci
-
       - name: Install frontend dependencies
         run: |
           cd steerifyproj
