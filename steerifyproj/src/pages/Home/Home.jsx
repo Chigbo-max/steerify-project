@@ -7,54 +7,61 @@ function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative bg-[#030F6D] text-white min-h-[600px] flex items-center justify-between mt-10 px-6 lg:px-32 py-20 w-full"
-        style={{ clipPath: "ellipse(100% 90% at 30% 0%)" }}
+        style={{ clipPath: "none" }}
       >
-        {/* Left Content */}
-        <div className="max-w-2xl space-y-8">
-          <div className="flex items-center space-x-2 mb-4">
-            <Shield className="w-6 h-6 text-[#2aa006]" />
-            <span className="text-[#2aa006] font-semibold">100% Fraud Protected</span>
-          </div>
-          
-          <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-            Quality Services.
-            <span className="text-[#2aa006]"> Protected</span> Investments.
-          </h1>
-          
-          <p className="text-xl lg:text-2xl opacity-90 leading-relaxed">
-            Book trusted local service providers in Lagos with complete fraud protection. 
-            Your money stays safe in escrow until the job is done perfectly.
-          </p>
-          
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-[#2aa006]" />
-              <span>Vetted Providers</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Shield className="w-5 h-5 text-[#2aa006]" />
-              <span>Escrow Protection</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Star className="w-5 h-5 text-[#2aa006]" />
-              <span>Verified Reviews</span>
-            </div>
-          </div>
-          
-          <button className="bg-[#2aa006] px-8 py-4 rounded-xl font-semibold text-white hover:bg-[#239205] transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Get Started - It's Free
-          </button>
-        </div>
+        <div
+          className="absolute inset-0 hidden lg:block"
+          style={{ clipPath: "ellipse(100% 90% at 30% 0%)", background: "#030F6D" }}
+        />
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full">
 
-        {/* Right Image */}
-        <div className="hidden lg:flex w-[400px] lg:w-[500px]">
-          <img
-            src={HeroImg}
-            alt="Steerify hero"
-            className="object-cover w-full h-full rounded-2xl shadow-2xl"
-          />
+          {/* Left Content */}
+          <div className="max-w-2xl space-y-8">
+            <div className="flex items-center space-x-2 mb-4">
+              <Shield className="w-6 h-6 text-[#2aa006]" />
+              <span className="text-[#2aa006] font-semibold">100% Fraud Protected</span>
+            </div>
+
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              Connecting Quality Businesses, Customers & Investors —
+              <span className="text-[#2aa006]"> Safely</span>
+            </h1>
+
+            <p className="text-xl lg:text-2xl opacity-90 leading-relaxed">
+              With Steerify, you don’t gamble on service providers.
+              We verify every cleaner, hold payments in escrow, and release funds only when the job is completed to your satisfaction. That’s 100% fraud protection — guaranteed.
+            </p>
+
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-[#2aa006]" />
+                <span>Vetted Providers</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Shield className="w-5 h-5 text-[#2aa006]" />
+                <span>Escrow Protection</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Star className="w-5 h-5 text-[#2aa006]" />
+                <span>Verified Reviews</span>
+              </div>
+            </div>
+
+            <button className="bg-[#2aa006] px-8 py-4 rounded-xl font-semibold text-white hover:bg-[#239205] transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Get Started - It's Free
+            </button>
+          </div>
+
+          {/* Right Image */}
+          <div className="hidden lg:flex w-[400px] lg:w-[500px]">
+            <img
+              src={HeroImg}
+              alt="Steerify hero"
+              className="object-cover w-full h-full rounded-2xl shadow-2xl"
+            />
+          </div>
         </div>
       </section>
 
@@ -66,7 +73,7 @@ function Home() {
               Why Choose <span className="text-[#030F6D]">Steerify</span>?
             </h2>
             <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-              We're solving the trust gap in local services with our escrow-first marketplace. 
+              We're solving the trust gap in local services with our escrow-first marketplace.
               Your security is our priority.
             </p>
           </div>
@@ -78,7 +85,7 @@ function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">100% Fraud Protection</h3>
               <p className="text-white/90">
-                Your money is held in secure escrow until service is completed to your satisfaction. 
+                Your money is held in secure escrow until service is completed to your satisfaction.
                 No payment released until you're happy.
               </p>
               <div className="mt-6 p-4 bg-white/10 rounded-lg border border-white/20">
@@ -94,7 +101,7 @@ function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Vetted Service Providers</h3>
               <p className="text-gray-600">
-                Every provider goes through our rigorous background checks, skill verification, 
+                Every provider goes through our rigorous background checks, skill verification,
                 and reference validation process.
               </p>
             </div>
@@ -125,7 +132,7 @@ function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Local Focus</h3>
               <p className="text-gray-600">
-                Find service providers in your specific Local Government Area (LGA) for faster, 
+                Find service providers in your specific Local Government Area (LGA) for faster,
                 more reliable service.
               </p>
             </div>
@@ -154,7 +161,7 @@ function Home() {
               Cleaning & Maintenance Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional cleaning and maintenance services across Lagos. All providers are vetted, 
+              Professional cleaning and maintenance services across Lagos. All providers are vetted,
               insured, and backed by our fraud protection guarantee.
             </p>
           </div>
@@ -167,13 +174,13 @@ function Home() {
                 features: ["Same-day service", "Eco-friendly products", "Door-to-door delivery"]
               },
               {
-                title: "Home Cleaning", 
+                title: "Home Cleaning",
                 description: "Deep cleaning for apartments, houses, and condos",
                 features: ["Regular/one-time", "Move-in/out cleaning", "Detailed checklist"]
               },
               {
                 title: "Industrial Cleaning",
-                description: "Commercial and office space cleaning solutions", 
+                description: "Commercial and office space cleaning solutions",
                 features: ["Office buildings", "Warehouses", "Retail spaces"]
               },
               {
@@ -182,7 +189,7 @@ function Home() {
                 features: ["Residential", "Commercial", "Preventive treatment"]
               },
               {
-                title: "Pool Cleaning", 
+                title: "Pool Cleaning",
                 description: "Complete pool maintenance and cleaning",
                 features: ["Weekly service", "Chemical balancing", "Equipment check"]
               }
@@ -211,13 +218,12 @@ function Home() {
       <section className="py-20 bg-[#030F6D] text-white">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Get Your Free Dashboard Today
+            Book Trusted Businesses in Minutes — Pay Safely, Get Quality Guaranteed
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of satisfied customers who trust Steerify. Create your account, 
-            fill in your details, and get instant access to your personalized dashboard - completely free!
+            Steerify connects you with verified cleaning businesses in Lagos, backed by escrow protection. Your money stays safe until the job is done — perfectly.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-6 mb-12 text-left">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="w-12 h-12 bg-[#2aa006] rounded-lg flex items-center justify-center mb-4">
@@ -226,7 +232,7 @@ function Home() {
               <h3 className="font-bold text-lg mb-2">Create Account</h3>
               <p className="text-sm opacity-80">Sign up with your email and basic details</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="w-12 h-12 bg-[#2aa006] rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white font-bold">2</span>
@@ -234,7 +240,7 @@ function Home() {
               <h3 className="font-bold text-lg mb-2">Complete Profile</h3>
               <p className="text-sm opacity-80">Add your location, preferences, and contact info</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="w-12 h-12 bg-[#2aa006] rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white font-bold">3</span>
@@ -245,23 +251,25 @@ function Home() {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold mb-4">What You Get For Free:</h3>
+            <h3 className="text-2xl font-bold mb-4">What Makes Steerify Different?
+            </h3>
             <div className="grid md:grid-cols-2 gap-4 text-left">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-[#2aa006]" />
-                <span>Personal dashboard with booking history</span>
+                <span>Verified Professionals Only – every cleaner is background-checked.</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-[#2aa006]" />
-                <span>Access to all vetted service providers</span>
+                <span> Safe Payments – money held in escrow until you’re satisfied.</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-[#2aa006]" />
-                <span>Real-time booking and tracking</span>
+                <span> Real-Time Booking – book instantly or schedule ahead.</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-[#2aa006]" />
-                <span>24/7 customer support</span>
+                <span> Always On Support – 24/7 assistance when you need it.
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-[#2aa006]" />
@@ -269,16 +277,16 @@ function Home() {
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-[#2aa006]" />
-                <span>Exclusive member discounts</span>
+                <span>Exclusive Discounts – save more as a Steerify member.</span>
               </div>
             </div>
           </div>
 
           <button className="bg-[#2aa006] px-8 py-4 rounded-xl font-semibold text-white hover:bg-[#239205] transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2">
-            <span>Sign Up Now - It's Free</span>
+            <span>Try It Free – Book Your First Cleaning Today</span>
             <ArrowRight className="w-5 h-5" />
           </button>
-          
+
           <p className="mt-4 text-sm opacity-70">
             No credit card required • No setup fees • Cancel anytime
           </p>
