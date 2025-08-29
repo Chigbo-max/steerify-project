@@ -7,15 +7,9 @@ function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section
-        className="relative bg-[#030F6D] text-white min-h-[600px] flex items-center justify-between mt-10 px-6 lg:px-32 py-20 w-full"
-        style={{ clipPath: "none" }}
+            <section 
+        className="relative bg-[#030F6D] text-white min-h-[600px] flex items-center justify-between mt-10 px-6 lg:px-32 py-20 w-full lg:[clip-path:ellipse(100%_90%_at_30%_0%)]"
       >
-        <div
-          className="absolute inset-0 hidden lg:block"
-          style={{ clipPath: "ellipse(100% 90% at 30% 0%)", background: "#030F6D" }}
-        />
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full">
 
           {/* Left Content */}
           <div className="max-w-2xl space-y-8">
@@ -49,7 +43,7 @@ function Home() {
               </div>
             </div>
 
-            <button className="bg-[#2aa006] px-8 py-4 rounded-xl font-semibold text-white hover:bg-[#239205] transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-[#2aa006] px-8 py-4 rounded-xl font-semibold mb-5 text-white hover:bg-[#239205] transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Started - It's Free
             </button>
           </div>
@@ -62,7 +56,6 @@ function Home() {
               className="object-cover w-full h-full rounded-2xl shadow-2xl"
             />
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
